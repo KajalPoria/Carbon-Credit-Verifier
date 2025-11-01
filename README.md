@@ -1,24 +1,49 @@
-# Welcome to your Lovable project
+# 🌱 AI-Powered Carbon Credit Verifier
 
-## Project info
+> **Code for Energy. Tokenize the Future.**  
+> An AI + Blockchain platform that verifies and mints real carbon credits based on renewable energy data.
 
-**URL**: https://lovable.dev/projects/28622a27-af72-4b68-ad57-6400f2d1f7ce
+---
 
-## How can I edit this code?
+## 🧠 Inspiration
+The global carbon market lacks transparency — many carbon credits are unverifiable or double-counted.  
+Our goal: **build trust in sustainability** using AI, IoT, and blockchain to automatically validate and tokenize genuine carbon credits.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ⚙️ How It Works
+1. **IoT sensors** (or simulated data feeds) collect energy production info from renewable sources.  
+2. **AI validation engine** analyzes the data to confirm emission reductions and detect anomalies.  
+3. **Chainlink oracles** push verified data to a **Polygon smart contract**.  
+4. **Smart contracts** mint verified carbon credit tokens (NFT or ERC-20).  
+5. **React dashboard** displays real-time metrics and minted token IDs.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/28622a27-af72-4b68-ad57-6400f2d1f7ce) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 💻 Tech Stack
 
-**Use your preferred IDE**
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | React, TypeScript, TailwindCSS |
+| **Backend** | Node.js, Express |
+| **Blockchain** | Polygon, Solidity, Chainlink Functions, CCIP |
+| **AI Layer** | LangChain, OpenAI API |
+| **IoT Simulation** | MQTT, CSV/JSON live data |
+| **Storage** | IPFS, Filecoin |
+| **Database** | PostgreSQL (PLpgSQL) |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Features
+- ✅ AI-verified renewable energy data  
+- ✅ Automatic carbon token minting on Polygon testnet  
+- ✅ Transparent blockchain ledger for emission proof  
+- ✅ Real-time dashboard to track credits & CO₂ savings  
+- ✅ Scalable for corporate ESG and sustainability audits  
+
+---
+
+## 🧪 How to Test Locally:
 
 Follow these steps:
 
@@ -34,40 +59,21 @@ npm i
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
+
+#Step 5: Simulate IoT data:
+
+Upload or generate random energy data (CSV/JSON).
+
+Watch live verification and token minting on the dashboard.
 ```
 
-**Edit a file directly in GitHub**
+<img width="876" height="206" alt="image" src="https://github.com/user-attachments/assets/bbc71090-cecf-44e9-b358-ce746a7f4b76" />
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
+🌍 Impact
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Promotes trust and transparency in carbon markets
 
-## What technologies are used for this project?
+Encourages sustainable investments with verifiable credits
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/28622a27-af72-4b68-ad57-6400f2d1f7ce) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Enables global ESG accountability through technology
