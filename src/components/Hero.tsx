@@ -34,11 +34,20 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500">
-          <Button size="lg" className="group bg-[var(--gradient-primary)] hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-[var(--glow-primary)]">
+          <Button 
+            size="lg" 
+            className="group bg-[var(--gradient-primary)] hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-[var(--glow-primary)]"
+            onClick={() => document.getElementById('dashboard')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             View Dashboard
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/5">
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-primary/30 hover:bg-primary/5"
+            onClick={() => document.getElementById('impact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             <TrendingUp className="mr-2 w-4 h-4" />
             See Impact
           </Button>

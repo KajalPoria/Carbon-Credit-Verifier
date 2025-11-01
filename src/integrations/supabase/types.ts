@@ -14,7 +14,118 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      energy_readings: {
+        Row: {
+          co2_offset_tons: number
+          created_at: string
+          energy_kwh: number
+          id: string
+          project_id: string
+          timestamp: string
+          verified: boolean
+        }
+        Insert: {
+          co2_offset_tons: number
+          created_at?: string
+          energy_kwh: number
+          id?: string
+          project_id: string
+          timestamp?: string
+          verified?: boolean
+        }
+        Update: {
+          co2_offset_tons?: number
+          created_at?: string
+          energy_kwh?: number
+          id?: string
+          project_id?: string
+          timestamp?: string
+          verified?: boolean
+        }
+        Relationships: [
+          {
+            foreignKeyName: "energy_readings_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      projects: {
+        Row: {
+          capacity_kw: number
+          created_at: string
+          id: string
+          location: string
+          name: string
+          project_type: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          capacity_kw: number
+          created_at?: string
+          id?: string
+          location: string
+          name: string
+          project_type: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          capacity_kw?: number
+          created_at?: string
+          id?: string
+          location?: string
+          name?: string
+          project_type?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      verifications: {
+        Row: {
+          ai_model: string
+          carbon_credits_minted: number
+          created_at: string
+          id: string
+          reading_id: string
+          validation_score: number
+          verified_at: string
+        }
+        Insert: {
+          ai_model: string
+          carbon_credits_minted?: number
+          created_at?: string
+          id?: string
+          reading_id: string
+          validation_score: number
+          verified_at?: string
+        }
+        Update: {
+          ai_model?: string
+          carbon_credits_minted?: number
+          created_at?: string
+          id?: string
+          reading_id?: string
+          validation_score?: number
+          verified_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "verifications_reading_id_fkey"
+            columns: ["reading_id"]
+            isOneToOne: false
+            referencedRelation: "energy_readings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
